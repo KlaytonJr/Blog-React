@@ -1,11 +1,11 @@
+import { createContext } from "react";
 
-const Context = () => {
-
-    return (
-        <>
-            <h1>Context</h1>
-        </>
-    );
-}
+// Criando o context e colocando um valor inicial padrão 
+const Context = createContext({
+    token: '',
+    setToken: () => {},
+    idUser: '',
+    setIdUser: () => {},
+})
 
 export default Context;
