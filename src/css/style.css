@@ -1820,6 +1820,16 @@ nav {
   }
 }
 
+.ilustration {
+  max-width: 256px;
+  transition: 0.5s ease;
+}
+@media screen and (max-width: 960px) {
+  .ilustration {
+    max-width: 144px;
+  }
+}
+
 .btn {
   display: inline-block;
   color: #F7F9FC;

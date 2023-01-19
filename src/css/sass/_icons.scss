@@ -42,3 +42,13 @@
   }
 
 }
+
+.ilustration{
+  max-width: 256px;
+  transition: .5s ease;
+
+  @include responsive(s){
+    max-width: 144px;
+  }
+
+}
