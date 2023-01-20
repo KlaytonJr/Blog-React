@@ -3,6 +3,8 @@ import Hero from './Hero';
 import Banner from './Banner';
 import Card from './Card';
 import Main from './Main';
+import Header from '../Header';
+import Footer from '../Footer';
 
 // Images
 import ny from '../../profile/ny.jpg';
@@ -52,6 +54,9 @@ const Home = () => {
 
     return (
         <>
+
+            <Header />
+
             <Hero />
 
             <section className="container">
@@ -82,18 +87,24 @@ const Home = () => {
                 <section className="container">
                     <h3 className="ml-2 mb-3">Mais vistos</h3>
                     <div className="row">
-    
-                        <Card />
-    
-                        <Card />
-    
-                        <Card />
+
+                    {
+                        mostseen.map((item) => {
+                            return <Card key={item.id} content={item} />
+                        })  
+                    }
 
                     </div>
                 </section>
             </div>
 
-            <Banner />
+            {
+                banner.map((item) => {
+                    return <Banner key={item.id} content={item} />
+                })  
+            }
+
+            <Footer />
         </>
     );
 }

@@ -1,5 +1,6 @@
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 
-
+// Pages
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -9,11 +10,8 @@ import Post from './pages/Post';
 import NotFound from './pages/NotFound';
 import Search from 'pages/Search';
 
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-
 import Context from 'pages/Context';
 import { useContext } from 'react';
-
 
 function PrivateRoute({ children }) {
   const { token } = useContext(Context);
@@ -27,22 +25,22 @@ const Paths = () => {
     
         <BrowserRouter>
             <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="about" element={<About/>}/>
-            <Route path="contact" element={<Contact/>}/>
-            <Route path="login" element={<Login/>}/>
+                <Route path="/" element={<Home/>}/>
+                <Route path="about" element={<About/>}/>
+                <Route path="contact" element={<Contact/>}/>
+                <Route path="login" element={<Login/>}/>
 
-            <Route path="profile" 
-            element={
-                <PrivateRoute>
-                    <Profile />
-                </PrivateRoute>
-            } />  
+                <Route path="profile" 
+                element={
+                    <PrivateRoute>
+                        <Profile />
+                    </PrivateRoute>
+                } />  
 
-            <Route path="post/:idPost" element={<Post/>}/>
-            <Route path="search/:word_search" element={<Search/>}/>
+                <Route path="post/:idPost" element={<Post/>}/>
+                <Route path="search/:word_search" element={<Search/>}/>
 
-            <Route path="*" element={<NotFound/>}/>
+                <Route path="*" element={<NotFound/>}/>
             </Routes>
         </BrowserRouter>
     

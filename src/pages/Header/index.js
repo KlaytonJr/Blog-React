@@ -10,7 +10,6 @@ const Header = () => {
                         <a href=""><img src={logo} alt="" /></a>
                     </div>
                     <ul className="menu">
-                        <li><a href="" className="p-1">Categorias</a></li>
                         <li><a href="" className="p-1">Sobre</a></li>
                         <li><a href="" className="p-1">Contato</a></li>
                     </ul>
@@ -37,7 +36,6 @@ const Header = () => {
             <div className="relative">
                 <div className="menu-mobile">
                     <ul className="nav-mobile">
-                        <li><a href="#" className="link-menu-mobile">Categorias</a></li>
                         <li><a href="#" className="link-menu-mobile">Sobre</a></li>
                         <li><a href="#" className="link-menu-mobile">Contato</a></li>
                         <li className="py-2 pl-2">
