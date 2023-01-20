@@ -1,5 +1,7 @@
 import blog from '../../../svg/blog.svg';
 
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
 
     return (
@@ -12,7 +14,7 @@ const Hero = () => {
                             Um blog para todos. 
                             Escrever. Ler. Comentar. Contribuir. Aprender. Conectar.
                         </p>
-                        <a href="" className="btn mt-2">Começar a escrever</a>
+                        <Link to="/login" className="btn mt-2">Começar a escrever</Link>
 
                     </div>
                     <div className="grid-1"></div>
