@@ -44,9 +44,12 @@ To install the dependecies.
 To run the project
 
 To run the mock backend
+
 `npm install -g json-server`
 
+
 and run the fake back-end on port 4000
+
 `json-server --watch db.json --port 4000` 
 
 ## Screenshots
